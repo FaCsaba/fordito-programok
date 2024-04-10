@@ -1,0 +1,8 @@
+a=42
+b=-1
+WHILE (b>0) DO
+t=a MOD b
+a=b
+b=t
+END
+a

@@ -5,7 +5,6 @@ import java.util.Map;
 import java.util.Objects;
 
 import com.csabapro.gen.LogExprBaseVisitor;
-import com.csabapro.gen.LogExprParser;
 import com.csabapro.gen.LogExprParser.AndContext;
 import com.csabapro.gen.LogExprParser.AssignContext;
 import com.csabapro.gen.LogExprParser.BoolContext;
