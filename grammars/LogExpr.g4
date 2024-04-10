@@ -17,7 +17,7 @@ expr:  NEG expr # neg
     ;
 
 ID  :   [A-Z]+ ;      // match identifiers <label id="code.tour.expr.3"/>
-BOOL :   TRU | FLS ;         // match integers
+BOOL:   TRU | FLS ;         // match integers
 NEWLINE:'\r'? '\n' ;     // return newlines to parser (is end-statement signal)
 WS  :   [ \t]+ -> skip ; // toss out whitespace
 
