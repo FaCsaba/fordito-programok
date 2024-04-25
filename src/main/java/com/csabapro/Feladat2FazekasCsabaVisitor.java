@@ -2,9 +2,9 @@ package com.csabapro;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
 
 import com.csabapro.gen.LogExprBaseVisitor;
-import com.csabapro.gen.LogExprParser;
 import com.csabapro.gen.LogExprParser.AndContext;
 import com.csabapro.gen.LogExprParser.AssignContext;
 import com.csabapro.gen.LogExprParser.BoolContext;
@@ -25,7 +25,7 @@ public class Feladat2FazekasCsabaVisitor extends LogExprBaseVisitor<Boolean> {
 
   @Override
   public Boolean visitBool(BoolContext ctx) {
-    Boolean value = ctx.BOOL().getSymbol().getType() == LogExprParser.TRU;
+    Boolean value = Objects.equals(ctx.BOOL().getSymbol().getText(), "1");
     return value;
   }
 
