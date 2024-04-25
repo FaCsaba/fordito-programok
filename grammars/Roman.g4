@@ -1,0 +1,22 @@
+grammar Roman;
+
+number : thousands? hundreds? tens? units?;
+
+thousands : THOUSAND THOUSAND? THOUSAND?;
+hundreds : NINEHUNDRED | FIVEHUNDRED HUNDRED? HUNDRED? HUNDRED? | FOURHUNDRED | HUNDRED HUNDRED? HUNDRED?;
+tens : NINETY | FIFTY TEN? TEN? TEN? | FORTY | TEN TEN? TEN?;
+units : NINE | FIVE ONE? ONE? ONE? | FOUR | ONE ONE? ONE?;
+
+ONE : 'I';
+FOUR : 'IV';
+FIVE : 'V';
+NINE : 'IX';
+TEN : 'X';
+FORTY : 'XL';
+FIFTY : 'L';
+NINETY : 'XC';
+HUNDRED : 'C';
+FOURHUNDRED : 'CD';
+FIVEHUNDRED : 'D';
+NINEHUNDRED : 'CM';
+THOUSAND : 'M';
